@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Form from "./Form";
 import TextField from "./TextField";
@@ -12,11 +12,11 @@ export const FormContext = () => {
   const validate = {
     developer({ developer }) {
       if (!developer) {
-        return 'Developer field is required';
+        return "Developer field is required";
       }
 
-      return '';
-    }
+      return "";
+    },
   };
 
   const onSubmit = async ({ values }) => {
@@ -25,7 +25,7 @@ export const FormContext = () => {
     alert(`
     Designer: ${designer}
     Developer: ${developer}
-    `)
+    `);
   };
 
   return (
@@ -40,9 +40,7 @@ export const FormContext = () => {
       >
         <TextField name="developer" label="Developer" />
         <TextField name="designer" label="Designer" />
-        <SubmitButton>
-          Submit
-        </SubmitButton>
+        <SubmitButton>Submit</SubmitButton>
       </Form>
     </>
   );

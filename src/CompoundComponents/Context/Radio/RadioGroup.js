@@ -23,7 +23,7 @@ export const useRadioContext = () => {
   const context = React.useContext(RadioContext);
   if (!context) {
     throw new Error(
-      `Radio compound components cannot be rendered outside the Toggle component`
+      `Radio compound components cannot be rendered outside the Radio component`
     );
   }
   return context;
